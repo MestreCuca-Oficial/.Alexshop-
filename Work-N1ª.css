@@ -1,0 +1,366 @@
+.alinea {
+
+    display: flex;
+    flex-direction: row;
+    /* Alinha na horizontal */
+    align-items: center;
+    gap: 10px;
+
+}
+
+.barra-vertical {
+    display: inline-block;
+    width: 3px;
+    /* Espessura da barra */
+    height: 50px;
+    /* Altura da barra */
+    background: #333;
+    /* Cor da barra */
+    margin: 0 16px;
+    /* Espaço entre logo e texto */
+    border-radius: 2px;
+    /* Opcional: bordas arredondadas */
+}
+
+img[ alt="Logo da AlexShop"] {
+
+    width: 98px;
+    /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+.barra_das_img {
+
+    background: springgreen;
+
+}
+
+img[ alt="imagem_da_primeira_etapa"] {
+
+    width: 70px;
+    /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    padding: 1px;
+}
+
+.primeiraetapa {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: #f9f9f9;
+    padding: 9px;
+    width: fit-content;
+    margin-top: 24px;
+    /* Espaço acima da caixa */
+}
+
+.linha-login {
+    display: flex;
+    align-items: flex-start;
+    /* Alinha pelo topo */
+    justify-content: space-between;
+    width: 100%;
+}
+
+.texto-lateral {
+    margin-left: 24px;
+    /* Espaço entre a caixa e o texto */
+    max-width: 300px;
+    /* Ajuste conforme necessário */
+}
+
+.segundaetapa {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: #f9f9f9;
+    padding: 9px;
+    width: fit-content;
+    margin-top: 24px;
+    /* Espaço acima da caixa */
+}
+
+.Produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* Adicione isto para forçar altura total */
+    flex: 1 1 0;
+}
+
+.area-principal {
+    display: flex;
+    align-items: stretch;
+}
+
+.Produtos {
+    flex: 2 1 0; /* Ocupa mais espaço */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Pagamento {
+    flex: 1 1 0; /* Ocupa menos espaço */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.barra-divisoria {
+    width: 3px;
+    background: #333;
+    border-radius: 2px;
+    margin: 0 24px;
+    height: auto;
+    /* Deixe auto */
+    align-self: stretch;
+    /* Faz a barra ocupar toda a altura do container flex */
+}
+
+
+.terceiraetapa {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: #f9f9f9;
+    padding: 9px;
+    width: fit-content;
+    margin-top: 24px;
+    /* Espaço acima da caixa */
+}
+
+.Pagamento {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Pagamento>p,
+.Pagamento>button {
+    margin-left: 24px;
+    /* Afasta do quadrado */
+    margin-top: 8px;
+    /* Espaço entre os itens */
+    font-size: 1rem;
+    /* Tamanho da fonte padrão */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+}
+
+.caixa-fase-um {
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: #f9f9f9;
+    padding: 16px;
+    width: 250px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caixa-fase-um p {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.campo-numeros {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+
+.produtos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.produto-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 12px;
+    width: 120px;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #fff;
+    position: relative;
+}
+
+.produto-card input[type="checkbox"] {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    transform: scale(1.2);
+}
+
+.produto-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.produto-card input[type="checkbox"]:checked+img,
+.produto-card input[type="checkbox"]:checked~span {
+    /* Opcional: destaque visual ao selecionar */
+    filter: brightness(0.8);
+}
+
+.produto-card input[type="checkbox"]:checked~span {
+    font-weight: bold;
+    color: #808080;
+}
+
+.produto-card:has(input[type="checkbox"]:checked) {
+    border-color: #3f3f3f;
+    box-shadow: 0 0 8px #505050e1;
+}
+
+.barra-horizontal {
+    border: none;
+    height: 4px;
+    /* Espessura da barra */
+    background: #333;
+    /* Cor da barra */
+    width: 100%;
+    /* Ocupa toda a largura */
+    margin: 0;
+    /* Remove margens padrão */
+}
+
+.soma-produtos {
+    border: 2px solid #434444;
+    border-radius: 10px;
+    background: #e3f2fd;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    min-width: 200px;
+}
+
+.soma-produtos p,
+.soma-produtos div {
+    margin: 8px 0;
+}
+
+.rodape {
+      text-align: center;
+}
+
+.formas-pagamento {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.pagamento-opcao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    background: #fff;
+    min-width: 180px;    /* Deixe menor */
+    max-width: 220px;    /* Limite máximo */
+    margin-bottom: 8px;
+}
+
+
+.pagamento-opcao input[type="radio"] {
+    accent-color: #4b4b4b;
+    margin-right: 8px;
+}
+
+.pagamento-opcao img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.pagamento-opcao input[type="radio"]:checked ~ span {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.pagamento-opcao:has(input[type="radio"]:checked) {
+    border-color: #ff8600;
+    box-shadow: 0 0 8px #ff860055;
+}
+
+.pagamento-opcao[value="express"],
+.pagamento-opcao input[value="express"] + img,
+.pagamento-opcao input[value="express"] ~ span {
+    background: #ff8600 !important;
+}
+
+.pagamento-opcao[value="transferencia_Bancaria"],
+.pagamento-opcao input[value="transferencia_Bancaria"] + img,
+.pagamento-opcao input[value="transferencia_Bancaria"] ~ span {
+    background: #8f9a9c !important;
+}
+
+.pagamento-opcao[value="Dinheiro_Fisico"],
+.pagamento-opcao input[value="Dinheiro_Fisico"] + img,
+.pagamento-opcao input[value="Dinheiro_Fisico"] ~ span {
+    background: #458455 !important;
+}
+
+/* Melhor abordagem: use classes específicas no HTML */
+.pagamento-opcao.transferencia {
+    background: #8f9a9c;
+}
+.pagamento-opcao.express {
+    background: #ff8600;
+}
+.pagamento-opcao.dinheiro {
+    background: #458455;
+}
+@keyframes pulse {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.05);}
+    100% { transform: scale(1);}
+}
+
+.pagamento-opcao:has(input[type="radio"]:checked) {
+    border-color: #ffffff;
+    box-shadow: 0 0 8px #e2e4e655;
+    animation: pulse 0.3s;
+}
+.botao-whatsapp {
+    display: inline-block;
+    background: #25d366;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+    margin: 8px 0;
+}
+.botao-whatsapp:hover {
+    background: #128c7e;
+}
